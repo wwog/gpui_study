@@ -5,3 +5,7 @@ edition.workspace = true
 
 [dependencies]
 gpui.workspace = true
+
+[[bin]]
+name = "view_creation_methods"
+path = "src/view_creation_methods.rs"
