@@ -1,0 +1,19 @@
+[package]
+name = "gpui_examples"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+gpui.workspace = true
+
+[[example]]
+name = "hello_world"
+path = "hello_world.rs"
+
+[[example]]
+name = "counter"
+path = "counter.rs"
+
+[[example]]
+name = "todo_list"
+path = "todo_list.rs"

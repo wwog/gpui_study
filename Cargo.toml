@@ -1,0 +1,19 @@
+[workspace]
+members = [
+    "01_basics",
+    "02_elements",
+    "03_state_management",
+    "04_styling",
+    "05_events",
+    "06_advanced",
+    "examples",
+]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name"]
+
+[workspace.dependencies]
+gpui = "0.2.2"
