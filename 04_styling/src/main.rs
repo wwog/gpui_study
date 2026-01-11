@@ -838,10 +838,11 @@ impl StylingApp {
 impl Render for StylingApp {
     fn render(&mut self, _window: &mut Window, cx: &mut Context<Self>) -> impl IntoElement {
         let mut content = div()
+            .id("main-content")  // 添加 id 以启用滚动
             .size_full()
             .flex()
             .flex_col()
-            .overflow_hidden()
+            .overflow_y_scroll()  // 启用垂直滚动
             .bg(rgb(0xE2E8F0))
             .p_6()
             .gap_6();

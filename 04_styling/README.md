@@ -285,13 +285,37 @@ div()
 .when_some(self.color, |s, color| s.bg(color))
 ```
 
-## 十、透明度
+## 十、溢出与滚动
+
+```rust
+.overflow_hidden()     // 隐藏溢出内容
+.overflow_x_scroll()   // 水平滚动
+.overflow_y_scroll()   // 垂直滚动（最常用）
+.overflow_scroll()     // 双向滚动
+```
+
+**⚠️ 重要**：滚动相关的方法需要元素有 `id` 才能工作！
+
+```rust
+// ❌ 错误 - 无法滚动
+div()
+    .overflow_y_scroll()
+    .child(...)
+
+// ✅ 正确 - 必须有 id
+div()
+    .id("scrollable-container")
+    .overflow_y_scroll()
+    .child(...)
+```
+
+## 十一、透明度
 
 ```rust
 .opacity(0.5)   // 50% 透明度
 ```
 
-## 十一、光标样式
+## 十二、光标样式
 
 ```rust
 .cursor_pointer()   // 手型光标
@@ -299,7 +323,7 @@ div()
 .cursor_text()      // 文本光标
 ```
 
-## 十二、调试
+## 十三、调试
 
 仅在 debug 构建中可用：
 
